@@ -41,7 +41,35 @@
 
     <script>
         const myChart = echarts.init(document.getElementById('tree-container'));
+        // Recursive function to hunt for errors and pop open the branches
+        function autoExpandErrors(node) {
+            // 1. Check if the current node itself has the error
+            let branchContainsError = (node.has_error === true);
 
+            // 2. Look at all the children
+            if (node.children && node.children.length > 0) {
+                for (let i = 0; i < node.children.length; i++) {
+                    // Recursively check every child branch
+                    let childHasError = autoExpandErrors(node.children[i]);
+                    
+                    // If any child branch contains an error, this parent MUST stay open
+                    if (childHasError) {
+                        branchContainsError = true;
+                    }
+                }
+            }
+
+            // 3. The ECharts Override: 
+            // If this branch has an error, force it open.
+            if (branchContainsError) {
+                node.collapsed = false; 
+            } else {
+                // Optional: Force clean branches to collapse to keep the screen uncluttered
+                // node.collapsed = true; 
+            }
+
+            return branchContainsError;
+        }
         function formatForChart(node) {
             // 1. Default to "background" styling for structural/grammar nodes
             let nodeColor = '#444'; // Dark gray
@@ -82,14 +110,22 @@
                 labelName += `\n{error|🚨 ${node.gcc_error} 🚨}`;
             }
 
-            return {
+            let formattedNode = {
                 name: labelName,
                 symbol: customSymbolType,
                 symbolSize: customSymbolSize,
                 itemStyle: itemStyleOverride,
                 label: customLabelStyle,
-                children: node.children ? node.children.map(formatForChart) : []
+                children: node.children ? node.children.filter(c => c.type !== 'comment').map(formatForChart) : []
             };
+
+            // 2. 🎯 THE MISSING LINK: Pass the override signal to ECharts!
+            if (node.collapsed === false) {
+                formattedNode.collapsed = false;
+            }
+
+            // 3. Return the fully tagged object
+            return formattedNode;
         }
 
         function loadTreeData(filename) {
@@ -99,20 +135,41 @@
                     return response.json();
                 })
                 .then(data => {
+                    autoExpandErrors(data);
                     const chartData = formatForChart(data);
-
                     myChart.setOption({
                         tooltip: { trigger: 'item', triggerOn: 'mousemove' },
                         series: [{
                             type: 'tree',
                             data: [chartData],
-                            top: '5%', left: '15%', bottom: '5%', right: '20%',
+                            top: '10%', left: '15%', bottom: '10%', right: '20%',
                             roam: true, 
                             scaleLimit: { min: 0.5, max: 3.5 },
                             orient: 'LR', 
-                            initialTreeDepth: 3, // <-- CHANGED THIS: Auto-collapses deep branches initially!
-                            label: { position: 'left', verticalAlign: 'middle', align: 'right', color: '#fff', fontSize: 14 },
-                            leaves: { label: { position: 'right', verticalAlign: 'middle', align: 'left', color: '#a1ef9b' } },
+                            initialTreeDepth: 3, 
+                            
+                            // 🎯 INTERNAL NODES: Float on top, centered above the dot
+                            label: { 
+                                position: 'top', 
+                                verticalAlign: 'bottom', 
+                                align: 'center', 
+                                distance: 8,       // Pushes it slightly up off the wire
+                                color: '#fff', 
+                                fontSize: 13,
+                                backgroundColor: 'transparent' // No masking needed on top
+                            },
+                            
+                            // 🎯 LEAF NODES: Keep them exactly as they are (on the right)
+                            leaves: { 
+                                label: { 
+                                    position: 'right', 
+                                    verticalAlign: 'middle', 
+                                    align: 'left', 
+                                    padding: [4, 6],
+                                    borderRadius: 4
+                                } 
+                            },
+                            
                             expandAndCollapse: true,
                             animationDuration: 550
                         }]
