@@ -1,0 +1,224 @@
+{
+    "children": [
+        {
+            "children": [
+                {
+                    "children": [],
+                    "field_name": "path",
+                    "has_error": false,
+                    "id": 2,
+                    "text": "<iostream>",
+                    "type": "system_lib_string"
+                }
+            ],
+            "has_error": false,
+            "id": 1,
+            "type": "preproc_include"
+        },
+        {
+            "children": [
+                {
+                    "children": [],
+                    "field_name": "type",
+                    "has_error": false,
+                    "id": 4,
+                    "text": "int",
+                    "type": "primitive_type"
+                },
+                {
+                    "children": [
+                        {
+                            "children": [],
+                            "field_name": "declarator",
+                            "has_error": false,
+                            "id": 6,
+                            "text": "main",
+                            "type": "identifier"
+                        },
+                        {
+                            "children": [],
+                            "field_name": "parameters",
+                            "has_error": false,
+                            "id": 7,
+                            "text": "()",
+                            "type": "parameter_list"
+                        }
+                    ],
+                    "field_name": "declarator",
+                    "has_error": false,
+                    "id": 5,
+                    "type": "function_declarator"
+                },
+                {
+                    "children": [
+                        {
+                            "children": [
+                                {
+                                    "children": [],
+                                    "field_name": "type",
+                                    "has_error": false,
+                                    "id": 10,
+                                    "text": "int",
+                                    "type": "primitive_type"
+                                },
+                                {
+                                    "children": [
+                                        {
+                                            "children": [],
+                                            "field_name": "declarator",
+                                            "has_error": false,
+                                            "id": 12,
+                                            "text": "a",
+                                            "type": "identifier"
+                                        },
+                                        {
+                                            "children": [],
+                                            "field_name": "value",
+                                            "has_error": false,
+                                            "id": 13,
+                                            "text": "10",
+                                            "type": "number_literal"
+                                        }
+                                    ],
+                                    "field_name": "declarator",
+                                    "has_error": false,
+                                    "id": 11,
+                                    "type": "init_declarator"
+                                }
+                            ],
+                            "has_error": false,
+                            "id": 9,
+                            "type": "declaration"
+                        },
+                        {
+                            "children": [],
+                            "has_error": false,
+                            "id": 14,
+                            "text": "// ERROR 1: 'b' is not declared in this scope",
+                            "type": "comment"
+                        },
+                        {
+                            "children": [],
+                            "has_error": false,
+                            "id": 15,
+                            "text": "// ERROR 2: Missing semicolon at the end",
+                            "type": "comment"
+                        },
+                        {
+                            "children": [
+                                {
+                                    "children": [
+                                        {
+                                            "children": [],
+                                            "field_name": "left",
+                                            "has_error": false,
+                                            "id": 18,
+                                            "text": "b",
+                                            "type": "identifier"
+                                        },
+                                        {
+                                            "children": [
+                                                {
+                                                    "children": [
+                                                        {
+                                                            "children": [],
+                                                            "field_name": "left",
+                                                            "has_error": false,
+                                                            "id": 21,
+                                                            "text": "a",
+                                                            "type": "identifier"
+                                                        },
+                                                        {
+                                                            "children": [
+                                                                {
+                                                                    "children": [],
+                                                                    "has_error": false,
+                                                                    "id": 23,
+                                                                    "text": "5",
+                                                                    "type": "number_literal"
+                                                                }
+                                                            ],
+                                                            "gcc_error": "Tree-sitter Syntax Error",
+                                                            "has_error": true,
+                                                            "id": 22,
+                                                            "type": "ERROR"
+                                                        },
+                                                        {
+                                                            "children": [
+                                                                {
+                                                                    "children": [],
+                                                                    "field_name": "scope",
+                                                                    "has_error": false,
+                                                                    "id": 25,
+                                                                    "text": "std",
+                                                                    "type": "namespace_identifier"
+                                                                },
+                                                                {
+                                                                    "children": [],
+                                                                    "field_name": "name",
+                                                                    "has_error": false,
+                                                                    "id": 26,
+                                                                    "text": "cout",
+                                                                    "type": "identifier"
+                                                                }
+                                                            ],
+                                                            "field_name": "right",
+                                                            "gcc_error": "expected '}' at end of input",
+                                                            "has_error": true,
+                                                            "id": 24,
+                                                            "type": "qualified_identifier"
+                                                        }
+                                                    ],
+                                                    "field_name": "left",
+                                                    "has_error": false,
+                                                    "id": 20,
+                                                    "type": "binary_expression"
+                                                },
+                                                {
+                                                    "children": [],
+                                                    "field_name": "right",
+                                                    "has_error": false,
+                                                    "id": 27,
+                                                    "text": "b",
+                                                    "type": "identifier"
+                                                }
+                                            ],
+                                            "field_name": "right",
+                                            "has_error": false,
+                                            "id": 19,
+                                            "type": "binary_expression"
+                                        }
+                                    ],
+                                    "has_error": false,
+                                    "id": 17,
+                                    "type": "assignment_expression"
+                                }
+                            ],
+                            "gcc_error": "'b' was not declared in this scope",
+                            "has_error": true,
+                            "id": 16,
+                            "type": "expression_statement"
+                        },
+                        {
+                            "children": [],
+                            "has_error": false,
+                            "id": 28,
+                            "text": "// ERROR 3: Missing closing bracket for main()",
+                            "type": "comment"
+                        }
+                    ],
+                    "field_name": "body",
+                    "has_error": false,
+                    "id": 8,
+                    "type": "compound_statement"
+                }
+            ],
+            "has_error": false,
+            "id": 3,
+            "type": "function_definition"
+        }
+    ],
+    "has_error": false,
+    "id": 0,
+    "type": "translation_unit"
+}

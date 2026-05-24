@@ -18,7 +18,7 @@ errors.txt
 # 3. Generated JSON Data 
 # Ignores the JSONs generated when testing the engine so they 
 # don't constantly clutter your git commit history.
-frontend/*_code.json
+# frontend/*_code.json
 frontend/ast_data.json
 
 # 4. OS & Editor Specific

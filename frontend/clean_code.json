@@ -1,0 +1,439 @@
+{
+    "children": [
+        {
+            "children": [
+                {
+                    "children": [],
+                    "field_name": "path",
+                    "has_error": false,
+                    "id": 2,
+                    "text": "<iostream>",
+                    "type": "system_lib_string"
+                }
+            ],
+            "has_error": false,
+            "id": 1,
+            "type": "preproc_include"
+        },
+        {
+            "children": [
+                {
+                    "children": [],
+                    "field_name": "type",
+                    "has_error": false,
+                    "id": 4,
+                    "text": "int",
+                    "type": "primitive_type"
+                },
+                {
+                    "children": [
+                        {
+                            "children": [],
+                            "field_name": "declarator",
+                            "has_error": false,
+                            "id": 6,
+                            "text": "factorial",
+                            "type": "identifier"
+                        },
+                        {
+                            "children": [
+                                {
+                                    "children": [
+                                        {
+                                            "children": [],
+                                            "field_name": "type",
+                                            "has_error": false,
+                                            "id": 9,
+                                            "text": "int",
+                                            "type": "primitive_type"
+                                        },
+                                        {
+                                            "children": [],
+                                            "field_name": "declarator",
+                                            "has_error": false,
+                                            "id": 10,
+                                            "text": "n",
+                                            "type": "identifier"
+                                        }
+                                    ],
+                                    "has_error": false,
+                                    "id": 8,
+                                    "type": "parameter_declaration"
+                                }
+                            ],
+                            "field_name": "parameters",
+                            "has_error": false,
+                            "id": 7,
+                            "type": "parameter_list"
+                        }
+                    ],
+                    "field_name": "declarator",
+                    "has_error": false,
+                    "id": 5,
+                    "type": "function_declarator"
+                },
+                {
+                    "children": [
+                        {
+                            "children": [
+                                {
+                                    "children": [
+                                        {
+                                            "children": [
+                                                {
+                                                    "children": [],
+                                                    "field_name": "left",
+                                                    "has_error": false,
+                                                    "id": 15,
+                                                    "text": "n",
+                                                    "type": "identifier"
+                                                },
+                                                {
+                                                    "children": [],
+                                                    "field_name": "right",
+                                                    "has_error": false,
+                                                    "id": 16,
+                                                    "text": "1",
+                                                    "type": "number_literal"
+                                                }
+                                            ],
+                                            "field_name": "value",
+                                            "has_error": false,
+                                            "id": 14,
+                                            "type": "binary_expression"
+                                        }
+                                    ],
+                                    "field_name": "condition",
+                                    "has_error": false,
+                                    "id": 13,
+                                    "type": "condition_clause"
+                                },
+                                {
+                                    "children": [
+                                        {
+                                            "children": [],
+                                            "has_error": false,
+                                            "id": 18,
+                                            "text": "1",
+                                            "type": "number_literal"
+                                        }
+                                    ],
+                                    "field_name": "consequence",
+                                    "has_error": false,
+                                    "id": 17,
+                                    "type": "return_statement"
+                                }
+                            ],
+                            "has_error": false,
+                            "id": 12,
+                            "type": "if_statement"
+                        },
+                        {
+                            "children": [
+                                {
+                                    "children": [
+                                        {
+                                            "children": [],
+                                            "field_name": "left",
+                                            "has_error": false,
+                                            "id": 21,
+                                            "text": "n",
+                                            "type": "identifier"
+                                        },
+                                        {
+                                            "children": [
+                                                {
+                                                    "children": [],
+                                                    "field_name": "function",
+                                                    "has_error": false,
+                                                    "id": 23,
+                                                    "text": "factorial",
+                                                    "type": "identifier"
+                                                },
+                                                {
+                                                    "children": [
+                                                        {
+                                                            "children": [
+                                                                {
+                                                                    "children": [],
+                                                                    "field_name": "left",
+                                                                    "has_error": false,
+                                                                    "id": 26,
+                                                                    "text": "n",
+                                                                    "type": "identifier"
+                                                                },
+                                                                {
+                                                                    "children": [],
+                                                                    "field_name": "right",
+                                                                    "has_error": false,
+                                                                    "id": 27,
+                                                                    "text": "1",
+                                                                    "type": "number_literal"
+                                                                }
+                                                            ],
+                                                            "has_error": false,
+                                                            "id": 25,
+                                                            "type": "binary_expression"
+                                                        }
+                                                    ],
+                                                    "field_name": "arguments",
+                                                    "has_error": false,
+                                                    "id": 24,
+                                                    "type": "argument_list"
+                                                }
+                                            ],
+                                            "field_name": "right",
+                                            "has_error": false,
+                                            "id": 22,
+                                            "type": "call_expression"
+                                        }
+                                    ],
+                                    "has_error": false,
+                                    "id": 20,
+                                    "type": "binary_expression"
+                                }
+                            ],
+                            "has_error": false,
+                            "id": 19,
+                            "type": "return_statement"
+                        }
+                    ],
+                    "field_name": "body",
+                    "has_error": false,
+                    "id": 11,
+                    "type": "compound_statement"
+                }
+            ],
+            "has_error": false,
+            "id": 3,
+            "type": "function_definition"
+        },
+        {
+            "children": [
+                {
+                    "children": [],
+                    "field_name": "type",
+                    "has_error": false,
+                    "id": 29,
+                    "text": "int",
+                    "type": "primitive_type"
+                },
+                {
+                    "children": [
+                        {
+                            "children": [],
+                            "field_name": "declarator",
+                            "has_error": false,
+                            "id": 31,
+                            "text": "main",
+                            "type": "identifier"
+                        },
+                        {
+                            "children": [],
+                            "field_name": "parameters",
+                            "has_error": false,
+                            "id": 32,
+                            "text": "()",
+                            "type": "parameter_list"
+                        }
+                    ],
+                    "field_name": "declarator",
+                    "has_error": false,
+                    "id": 30,
+                    "type": "function_declarator"
+                },
+                {
+                    "children": [
+                        {
+                            "children": [
+                                {
+                                    "children": [],
+                                    "field_name": "type",
+                                    "has_error": false,
+                                    "id": 35,
+                                    "text": "int",
+                                    "type": "primitive_type"
+                                },
+                                {
+                                    "children": [
+                                        {
+                                            "children": [],
+                                            "field_name": "declarator",
+                                            "has_error": false,
+                                            "id": 37,
+                                            "text": "result",
+                                            "type": "identifier"
+                                        },
+                                        {
+                                            "children": [
+                                                {
+                                                    "children": [],
+                                                    "field_name": "function",
+                                                    "has_error": false,
+                                                    "id": 39,
+                                                    "text": "factorial",
+                                                    "type": "identifier"
+                                                },
+                                                {
+                                                    "children": [
+                                                        {
+                                                            "children": [],
+                                                            "has_error": false,
+                                                            "id": 41,
+                                                            "text": "5",
+                                                            "type": "number_literal"
+                                                        }
+                                                    ],
+                                                    "field_name": "arguments",
+                                                    "has_error": false,
+                                                    "id": 40,
+                                                    "type": "argument_list"
+                                                }
+                                            ],
+                                            "field_name": "value",
+                                            "has_error": false,
+                                            "id": 38,
+                                            "type": "call_expression"
+                                        }
+                                    ],
+                                    "field_name": "declarator",
+                                    "has_error": false,
+                                    "id": 36,
+                                    "type": "init_declarator"
+                                }
+                            ],
+                            "has_error": false,
+                            "id": 34,
+                            "type": "declaration"
+                        },
+                        {
+                            "children": [
+                                {
+                                    "children": [
+                                        {
+                                            "children": [
+                                                {
+                                                    "children": [
+                                                        {
+                                                            "children": [
+                                                                {
+                                                                    "children": [],
+                                                                    "field_name": "scope",
+                                                                    "has_error": false,
+                                                                    "id": 47,
+                                                                    "text": "std",
+                                                                    "type": "namespace_identifier"
+                                                                },
+                                                                {
+                                                                    "children": [],
+                                                                    "field_name": "name",
+                                                                    "has_error": false,
+                                                                    "id": 48,
+                                                                    "text": "cout",
+                                                                    "type": "identifier"
+                                                                }
+                                                            ],
+                                                            "field_name": "left",
+                                                            "has_error": false,
+                                                            "id": 46,
+                                                            "type": "qualified_identifier"
+                                                        },
+                                                        {
+                                                            "children": [
+                                                                {
+                                                                    "children": [],
+                                                                    "has_error": false,
+                                                                    "id": 50,
+                                                                    "text": "Factorial of 5 is: ",
+                                                                    "type": "string_content"
+                                                                }
+                                                            ],
+                                                            "field_name": "right",
+                                                            "has_error": false,
+                                                            "id": 49,
+                                                            "type": "string_literal"
+                                                        }
+                                                    ],
+                                                    "field_name": "left",
+                                                    "has_error": false,
+                                                    "id": 45,
+                                                    "type": "binary_expression"
+                                                },
+                                                {
+                                                    "children": [],
+                                                    "field_name": "right",
+                                                    "has_error": false,
+                                                    "id": 51,
+                                                    "text": "result",
+                                                    "type": "identifier"
+                                                }
+                                            ],
+                                            "field_name": "left",
+                                            "has_error": false,
+                                            "id": 44,
+                                            "type": "binary_expression"
+                                        },
+                                        {
+                                            "children": [
+                                                {
+                                                    "children": [],
+                                                    "field_name": "scope",
+                                                    "has_error": false,
+                                                    "id": 53,
+                                                    "text": "std",
+                                                    "type": "namespace_identifier"
+                                                },
+                                                {
+                                                    "children": [],
+                                                    "field_name": "name",
+                                                    "has_error": false,
+                                                    "id": 54,
+                                                    "text": "endl",
+                                                    "type": "identifier"
+                                                }
+                                            ],
+                                            "field_name": "right",
+                                            "has_error": false,
+                                            "id": 52,
+                                            "type": "qualified_identifier"
+                                        }
+                                    ],
+                                    "has_error": false,
+                                    "id": 43,
+                                    "type": "binary_expression"
+                                }
+                            ],
+                            "has_error": false,
+                            "id": 42,
+                            "type": "expression_statement"
+                        },
+                        {
+                            "children": [
+                                {
+                                    "children": [],
+                                    "has_error": false,
+                                    "id": 56,
+                                    "text": "0",
+                                    "type": "number_literal"
+                                }
+                            ],
+                            "has_error": false,
+                            "id": 55,
+                            "type": "return_statement"
+                        }
+                    ],
+                    "field_name": "body",
+                    "has_error": false,
+                    "id": 33,
+                    "type": "compound_statement"
+                }
+            ],
+            "has_error": false,
+            "id": 28,
+            "type": "function_definition"
+        }
+    ],
+    "has_error": false,
+    "id": 0,
+    "type": "translation_unit"
+}

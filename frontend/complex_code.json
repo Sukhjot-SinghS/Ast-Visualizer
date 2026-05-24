@@ -1,0 +1,735 @@
+{
+    "children": [
+        {
+            "children": [
+                {
+                    "children": [],
+                    "field_name": "path",
+                    "has_error": false,
+                    "id": 2,
+                    "text": "<iostream>",
+                    "type": "system_lib_string"
+                }
+            ],
+            "has_error": false,
+            "id": 1,
+            "type": "preproc_include"
+        },
+        {
+            "children": [
+                {
+                    "children": [],
+                    "field_name": "name",
+                    "has_error": false,
+                    "id": 4,
+                    "text": "Node",
+                    "type": "type_identifier"
+                },
+                {
+                    "children": [
+                        {
+                            "children": [],
+                            "has_error": false,
+                            "id": 6,
+                            "text": "public",
+                            "type": "access_specifier"
+                        },
+                        {
+                            "children": [
+                                {
+                                    "children": [],
+                                    "field_name": "type",
+                                    "has_error": false,
+                                    "id": 8,
+                                    "text": "int",
+                                    "type": "primitive_type"
+                                },
+                                {
+                                    "children": [],
+                                    "field_name": "declarator",
+                                    "has_error": false,
+                                    "id": 9,
+                                    "text": "data",
+                                    "type": "field_identifier"
+                                }
+                            ],
+                            "has_error": false,
+                            "id": 7,
+                            "type": "field_declaration"
+                        },
+                        {
+                            "children": [
+                                {
+                                    "children": [],
+                                    "field_name": "type",
+                                    "has_error": false,
+                                    "id": 11,
+                                    "text": "Node",
+                                    "type": "type_identifier"
+                                },
+                                {
+                                    "children": [
+                                        {
+                                            "children": [],
+                                            "field_name": "declarator",
+                                            "has_error": false,
+                                            "id": 13,
+                                            "text": "next",
+                                            "type": "field_identifier"
+                                        }
+                                    ],
+                                    "field_name": "declarator",
+                                    "has_error": false,
+                                    "id": 12,
+                                    "type": "pointer_declarator"
+                                }
+                            ],
+                            "has_error": false,
+                            "id": 10,
+                            "type": "field_declaration"
+                        },
+                        {
+                            "children": [],
+                            "has_error": false,
+                            "id": 14,
+                            "text": "// Constructor with initialization list",
+                            "type": "comment"
+                        },
+                        {
+                            "children": [
+                                {
+                                    "children": [
+                                        {
+                                            "children": [],
+                                            "field_name": "declarator",
+                                            "has_error": false,
+                                            "id": 17,
+                                            "text": "Node",
+                                            "type": "identifier"
+                                        },
+                                        {
+                                            "children": [
+                                                {
+                                                    "children": [
+                                                        {
+                                                            "children": [],
+                                                            "field_name": "type",
+                                                            "has_error": false,
+                                                            "id": 20,
+                                                            "text": "int",
+                                                            "type": "primitive_type"
+                                                        },
+                                                        {
+                                                            "children": [],
+                                                            "field_name": "declarator",
+                                                            "has_error": false,
+                                                            "id": 21,
+                                                            "text": "val",
+                                                            "type": "identifier"
+                                                        }
+                                                    ],
+                                                    "has_error": false,
+                                                    "id": 19,
+                                                    "type": "parameter_declaration"
+                                                }
+                                            ],
+                                            "field_name": "parameters",
+                                            "has_error": false,
+                                            "id": 18,
+                                            "type": "parameter_list"
+                                        }
+                                    ],
+                                    "field_name": "declarator",
+                                    "has_error": false,
+                                    "id": 16,
+                                    "type": "function_declarator"
+                                },
+                                {
+                                    "children": [
+                                        {
+                                            "children": [
+                                                {
+                                                    "children": [],
+                                                    "has_error": false,
+                                                    "id": 24,
+                                                    "text": "data",
+                                                    "type": "field_identifier"
+                                                },
+                                                {
+                                                    "children": [
+                                                        {
+                                                            "children": [],
+                                                            "has_error": false,
+                                                            "id": 26,
+                                                            "text": "val",
+                                                            "type": "identifier"
+                                                        }
+                                                    ],
+                                                    "has_error": false,
+                                                    "id": 25,
+                                                    "type": "argument_list"
+                                                }
+                                            ],
+                                            "has_error": false,
+                                            "id": 23,
+                                            "type": "field_initializer"
+                                        },
+                                        {
+                                            "children": [
+                                                {
+                                                    "children": [],
+                                                    "has_error": false,
+                                                    "id": 28,
+                                                    "text": "next",
+                                                    "type": "field_identifier"
+                                                },
+                                                {
+                                                    "children": [
+                                                        {
+                                                            "children": [],
+                                                            "has_error": false,
+                                                            "id": 30,
+                                                            "text": "nullptr",
+                                                            "type": "null"
+                                                        }
+                                                    ],
+                                                    "has_error": false,
+                                                    "id": 29,
+                                                    "type": "argument_list"
+                                                }
+                                            ],
+                                            "has_error": false,
+                                            "id": 27,
+                                            "type": "field_initializer"
+                                        }
+                                    ],
+                                    "has_error": false,
+                                    "id": 22,
+                                    "type": "field_initializer_list"
+                                },
+                                {
+                                    "children": [],
+                                    "field_name": "body",
+                                    "has_error": false,
+                                    "id": 31,
+                                    "text": "{}",
+                                    "type": "compound_statement"
+                                }
+                            ],
+                            "has_error": false,
+                            "id": 15,
+                            "type": "function_definition"
+                        }
+                    ],
+                    "field_name": "body",
+                    "has_error": false,
+                    "id": 5,
+                    "type": "field_declaration_list"
+                }
+            ],
+            "has_error": false,
+            "id": 3,
+            "type": "class_specifier"
+        },
+        {
+            "children": [
+                {
+                    "children": [],
+                    "field_name": "type",
+                    "has_error": false,
+                    "id": 33,
+                    "text": "int",
+                    "type": "primitive_type"
+                },
+                {
+                    "children": [
+                        {
+                            "children": [],
+                            "field_name": "declarator",
+                            "has_error": false,
+                            "id": 35,
+                            "text": "main",
+                            "type": "identifier"
+                        },
+                        {
+                            "children": [],
+                            "field_name": "parameters",
+                            "has_error": false,
+                            "id": 36,
+                            "text": "()",
+                            "type": "parameter_list"
+                        }
+                    ],
+                    "field_name": "declarator",
+                    "has_error": false,
+                    "id": 34,
+                    "type": "function_declarator"
+                },
+                {
+                    "children": [
+                        {
+                            "children": [],
+                            "has_error": false,
+                            "id": 38,
+                            "text": "// Dynamic memory allocation",
+                            "type": "comment"
+                        },
+                        {
+                            "children": [
+                                {
+                                    "children": [],
+                                    "field_name": "type",
+                                    "has_error": false,
+                                    "id": 40,
+                                    "text": "Node",
+                                    "type": "type_identifier"
+                                },
+                                {
+                                    "children": [
+                                        {
+                                            "children": [
+                                                {
+                                                    "children": [],
+                                                    "field_name": "declarator",
+                                                    "has_error": false,
+                                                    "id": 43,
+                                                    "text": "head",
+                                                    "type": "identifier"
+                                                }
+                                            ],
+                                            "field_name": "declarator",
+                                            "has_error": false,
+                                            "id": 42,
+                                            "type": "pointer_declarator"
+                                        },
+                                        {
+                                            "children": [
+                                                {
+                                                    "children": [],
+                                                    "field_name": "type",
+                                                    "has_error": false,
+                                                    "id": 45,
+                                                    "text": "Node",
+                                                    "type": "type_identifier"
+                                                },
+                                                {
+                                                    "children": [
+                                                        {
+                                                            "children": [],
+                                                            "has_error": false,
+                                                            "id": 47,
+                                                            "text": "100",
+                                                            "type": "number_literal"
+                                                        }
+                                                    ],
+                                                    "field_name": "arguments",
+                                                    "has_error": false,
+                                                    "id": 46,
+                                                    "type": "argument_list"
+                                                }
+                                            ],
+                                            "field_name": "value",
+                                            "has_error": false,
+                                            "id": 44,
+                                            "type": "new_expression"
+                                        }
+                                    ],
+                                    "field_name": "declarator",
+                                    "has_error": false,
+                                    "id": 41,
+                                    "type": "init_declarator"
+                                }
+                            ],
+                            "has_error": false,
+                            "id": 39,
+                            "type": "declaration"
+                        },
+                        {
+                            "children": [
+                                {
+                                    "children": [
+                                        {
+                                            "children": [
+                                                {
+                                                    "children": [],
+                                                    "field_name": "argument",
+                                                    "has_error": false,
+                                                    "id": 51,
+                                                    "text": "head",
+                                                    "type": "identifier"
+                                                },
+                                                {
+                                                    "children": [],
+                                                    "field_name": "field",
+                                                    "has_error": false,
+                                                    "id": 52,
+                                                    "text": "next",
+                                                    "type": "field_identifier"
+                                                }
+                                            ],
+                                            "field_name": "left",
+                                            "has_error": false,
+                                            "id": 50,
+                                            "type": "field_expression"
+                                        },
+                                        {
+                                            "children": [
+                                                {
+                                                    "children": [],
+                                                    "field_name": "type",
+                                                    "has_error": false,
+                                                    "id": 54,
+                                                    "text": "Node",
+                                                    "type": "type_identifier"
+                                                },
+                                                {
+                                                    "children": [
+                                                        {
+                                                            "children": [],
+                                                            "has_error": false,
+                                                            "id": 56,
+                                                            "text": "200",
+                                                            "type": "number_literal"
+                                                        }
+                                                    ],
+                                                    "field_name": "arguments",
+                                                    "has_error": false,
+                                                    "id": 55,
+                                                    "type": "argument_list"
+                                                }
+                                            ],
+                                            "field_name": "right",
+                                            "has_error": false,
+                                            "id": 53,
+                                            "type": "new_expression"
+                                        }
+                                    ],
+                                    "has_error": false,
+                                    "id": 49,
+                                    "type": "assignment_expression"
+                                }
+                            ],
+                            "has_error": false,
+                            "id": 48,
+                            "type": "expression_statement"
+                        },
+                        {
+                            "children": [
+                                {
+                                    "children": [],
+                                    "field_name": "type",
+                                    "has_error": false,
+                                    "id": 58,
+                                    "text": "Node",
+                                    "type": "type_identifier"
+                                },
+                                {
+                                    "children": [
+                                        {
+                                            "children": [
+                                                {
+                                                    "children": [],
+                                                    "field_name": "declarator",
+                                                    "has_error": false,
+                                                    "id": 61,
+                                                    "text": "temp",
+                                                    "type": "identifier"
+                                                }
+                                            ],
+                                            "field_name": "declarator",
+                                            "has_error": false,
+                                            "id": 60,
+                                            "type": "pointer_declarator"
+                                        },
+                                        {
+                                            "children": [],
+                                            "field_name": "value",
+                                            "has_error": false,
+                                            "id": 62,
+                                            "text": "head",
+                                            "type": "identifier"
+                                        }
+                                    ],
+                                    "field_name": "declarator",
+                                    "has_error": false,
+                                    "id": 59,
+                                    "type": "init_declarator"
+                                }
+                            ],
+                            "has_error": false,
+                            "id": 57,
+                            "type": "declaration"
+                        },
+                        {
+                            "children": [
+                                {
+                                    "children": [
+                                        {
+                                            "children": [
+                                                {
+                                                    "children": [],
+                                                    "field_name": "left",
+                                                    "has_error": false,
+                                                    "id": 66,
+                                                    "text": "temp",
+                                                    "type": "identifier"
+                                                },
+                                                {
+                                                    "children": [],
+                                                    "field_name": "right",
+                                                    "has_error": false,
+                                                    "id": 67,
+                                                    "text": "nullptr",
+                                                    "type": "null"
+                                                }
+                                            ],
+                                            "field_name": "value",
+                                            "has_error": false,
+                                            "id": 65,
+                                            "type": "binary_expression"
+                                        }
+                                    ],
+                                    "field_name": "condition",
+                                    "has_error": false,
+                                    "id": 64,
+                                    "type": "condition_clause"
+                                },
+                                {
+                                    "children": [
+                                        {
+                                            "children": [
+                                                {
+                                                    "children": [
+                                                        {
+                                                            "children": [
+                                                                {
+                                                                    "children": [
+                                                                        {
+                                                                            "children": [],
+                                                                            "field_name": "scope",
+                                                                            "has_error": false,
+                                                                            "id": 73,
+                                                                            "text": "std",
+                                                                            "type": "namespace_identifier"
+                                                                        },
+                                                                        {
+                                                                            "children": [],
+                                                                            "field_name": "name",
+                                                                            "has_error": false,
+                                                                            "id": 74,
+                                                                            "text": "cout",
+                                                                            "type": "identifier"
+                                                                        }
+                                                                    ],
+                                                                    "field_name": "left",
+                                                                    "has_error": false,
+                                                                    "id": 72,
+                                                                    "type": "qualified_identifier"
+                                                                },
+                                                                {
+                                                                    "children": [
+                                                                        {
+                                                                            "children": [],
+                                                                            "field_name": "argument",
+                                                                            "has_error": false,
+                                                                            "id": 76,
+                                                                            "text": "temp",
+                                                                            "type": "identifier"
+                                                                        },
+                                                                        {
+                                                                            "children": [],
+                                                                            "field_name": "field",
+                                                                            "has_error": false,
+                                                                            "id": 77,
+                                                                            "text": "data",
+                                                                            "type": "field_identifier"
+                                                                        }
+                                                                    ],
+                                                                    "field_name": "right",
+                                                                    "has_error": false,
+                                                                    "id": 75,
+                                                                    "type": "field_expression"
+                                                                }
+                                                            ],
+                                                            "field_name": "left",
+                                                            "has_error": false,
+                                                            "id": 71,
+                                                            "type": "binary_expression"
+                                                        },
+                                                        {
+                                                            "children": [
+                                                                {
+                                                                    "children": [],
+                                                                    "has_error": false,
+                                                                    "id": 79,
+                                                                    "text": " -> ",
+                                                                    "type": "string_content"
+                                                                }
+                                                            ],
+                                                            "field_name": "right",
+                                                            "has_error": false,
+                                                            "id": 78,
+                                                            "type": "string_literal"
+                                                        }
+                                                    ],
+                                                    "has_error": false,
+                                                    "id": 70,
+                                                    "type": "binary_expression"
+                                                }
+                                            ],
+                                            "has_error": false,
+                                            "id": 69,
+                                            "type": "expression_statement"
+                                        },
+                                        {
+                                            "children": [
+                                                {
+                                                    "children": [
+                                                        {
+                                                            "children": [],
+                                                            "field_name": "left",
+                                                            "has_error": false,
+                                                            "id": 82,
+                                                            "text": "temp",
+                                                            "type": "identifier"
+                                                        },
+                                                        {
+                                                            "children": [
+                                                                {
+                                                                    "children": [],
+                                                                    "field_name": "argument",
+                                                                    "has_error": false,
+                                                                    "id": 84,
+                                                                    "text": "temp",
+                                                                    "type": "identifier"
+                                                                },
+                                                                {
+                                                                    "children": [],
+                                                                    "field_name": "field",
+                                                                    "has_error": false,
+                                                                    "id": 85,
+                                                                    "text": "next",
+                                                                    "type": "field_identifier"
+                                                                }
+                                                            ],
+                                                            "field_name": "right",
+                                                            "has_error": false,
+                                                            "id": 83,
+                                                            "type": "field_expression"
+                                                        }
+                                                    ],
+                                                    "has_error": false,
+                                                    "id": 81,
+                                                    "type": "assignment_expression"
+                                                }
+                                            ],
+                                            "has_error": false,
+                                            "id": 80,
+                                            "type": "expression_statement"
+                                        }
+                                    ],
+                                    "field_name": "body",
+                                    "has_error": false,
+                                    "id": 68,
+                                    "type": "compound_statement"
+                                }
+                            ],
+                            "has_error": false,
+                            "id": 63,
+                            "type": "while_statement"
+                        },
+                        {
+                            "children": [],
+                            "has_error": false,
+                            "id": 86,
+                            "text": "// Cleanup",
+                            "type": "comment"
+                        },
+                        {
+                            "children": [
+                                {
+                                    "children": [
+                                        {
+                                            "children": [
+                                                {
+                                                    "children": [],
+                                                    "field_name": "argument",
+                                                    "has_error": false,
+                                                    "id": 90,
+                                                    "text": "head",
+                                                    "type": "identifier"
+                                                },
+                                                {
+                                                    "children": [],
+                                                    "field_name": "field",
+                                                    "has_error": false,
+                                                    "id": 91,
+                                                    "text": "next",
+                                                    "type": "field_identifier"
+                                                }
+                                            ],
+                                            "has_error": false,
+                                            "id": 89,
+                                            "type": "field_expression"
+                                        }
+                                    ],
+                                    "has_error": false,
+                                    "id": 88,
+                                    "type": "delete_expression"
+                                }
+                            ],
+                            "has_error": false,
+                            "id": 87,
+                            "type": "expression_statement"
+                        },
+                        {
+                            "children": [
+                                {
+                                    "children": [
+                                        {
+                                            "children": [],
+                                            "has_error": false,
+                                            "id": 94,
+                                            "text": "head",
+                                            "type": "identifier"
+                                        }
+                                    ],
+                                    "has_error": false,
+                                    "id": 93,
+                                    "type": "delete_expression"
+                                }
+                            ],
+                            "has_error": false,
+                            "id": 92,
+                            "type": "expression_statement"
+                        },
+                        {
+                            "children": [
+                                {
+                                    "children": [],
+                                    "has_error": false,
+                                    "id": 96,
+                                    "text": "0",
+                                    "type": "number_literal"
+                                }
+                            ],
+                            "has_error": false,
+                            "id": 95,
+                            "type": "return_statement"
+                        }
+                    ],
+                    "field_name": "body",
+                    "has_error": false,
+                    "id": 37,
+                    "type": "compound_statement"
+                }
+            ],
+            "has_error": false,
+            "id": 32,
+            "type": "function_definition"
+        }
+    ],
+    "has_error": false,
+    "id": 0,
+    "type": "translation_unit"
+}
