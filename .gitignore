@@ -1,0 +1,39 @@
+# ==========================================
+# C++ AST Visualizer - .gitignore
+# ==========================================
+
+# 1. Compiled Executables
+ast-viz
+ast-viz.exe
+*.exe
+*.out
+*.app
+
+# 2. Temporary Runtime Files
+# Catches the GCC stderr dump and the Graphviz intermediate files
+errors.txt
+*.dot
+*.exe
+
+# 3. Generated JSON Data 
+# Ignores the JSONs generated when testing the engine so they 
+# don't constantly clutter your git commit history.
+frontend/*_code.json
+frontend/ast_data.json
+
+# 4. OS & Editor Specific
+# Cleans up the background files created by VS Code and Windows/Mac
+.vscode/
+.DS_Store
+Thumbs.db
+*.log
+
+# ==========================================
+# ⚠️ STRATEGIC EXCEPTIONS (WHAT WE KEEP)
+# ==========================================
+# Note: We deliberately DO NOT ignore *.o files here. 
+# Your vendored Tree-sitter files (parser.o, scanner.o, tree-sitter.o) 
+# MUST be tracked by Git so recruiters can compile without dependencies.
+#
+# We also DO NOT ignore *.svg or *.png files because you are 
+# hosting the static example graphs for the Web UI and README gallery.

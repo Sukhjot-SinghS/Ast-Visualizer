@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C++ AST Visualizer</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+    <style>
+        body { margin: 0; background-color: #1e1e1e; color: white; font-family: sans-serif; overflow: hidden; }
+        #tree-container { width: 100vw; height: 100vh; }
+        
+        /* 🎨 STYLING FOR THE FLOATING MENU */
+        #ui-panel {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(40, 40, 40, 0.9);
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #444;
+            z-index: 10; /* Keeps it on top of the canvas */
+        }
+        #ui-panel h3 { margin: 0 0 10px 0; font-size: 16px; color: #a1ef9b; }
+        select {
+            background: #333; color: white; border: 1px solid #555;
+            padding: 8px; border-radius: 4px; font-size: 14px; outline: none; cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="ui-panel">
+        <h3>🌳 AST Showcase Gallery</h3>
+        <select id="example-selector">
+            <option value="clean_code.json">Example 1: Clean Code</option>
+            <option value="broken_code.json">Example 2: Broken</option>
+            <option value="complex_code.json">Example 3: Complex Logic</option>
+        </select>
+    </div>
+
+    <div id="tree-container"></div>
+
+    <script>
+        const myChart = echarts.init(document.getElementById('tree-container'));
+
+        function formatForChart(node) {
+            // 1. Default to "background" styling for structural/grammar nodes
+            let nodeColor = '#444'; // Dark gray
+            let customSymbolType = 'emptyCircle'; 
+            let customSymbolSize = 8; 
+            let isLeaf = (!node.children || node.children.length === 0);
+            
+            // Build the label using ECharts Rich Text tags
+            let labelName = `{type|${node.type}}`; 
+            if (node.field_name) labelName += `\n{field|Field: ${node.field_name}}`;
+            
+            // 2. If it has actual source text, make it POP
+            if (node.text && node.text.length > 0) {
+                labelName += `\n{code|"${node.text}"}`;
+                nodeColor = '#9bdaef'; // Pastel Blue
+                customSymbolType = 'circle';
+                customSymbolSize = 14;
+            }
+
+            let itemStyleOverride = { color: nodeColor, borderColor: nodeColor, borderWidth: 2 };
+            
+            // 3. Define the Rich Text styles
+            let customLabelStyle = {
+                rich: {
+                    type: { color: isLeaf ? '#888' : '#666', fontSize: 11 }, // Dim the grammar names
+                    field: { color: '#a1ef9b', fontSize: 10 },
+                    code: { color: '#ffffff', fontSize: 14, fontWeight: 'bold', padding: [4, 0, 0, 0] }, // Bold white for code
+                    error: { color: '#ffffff', fontSize: 14, fontWeight: 'bold' }
+                }
+            };
+
+            // 4. Keep your awesome Red Error Blocks
+            if (node.has_error) {
+                const deepRed = '#c0392b'; 
+                customSymbolType = 'rect';
+                itemStyleOverride = { color: deepRed, borderColor: deepRed, borderWidth: 1, shadowColor: 'rgba(255,0,0,0.5)', shadowBlur: 10 };
+                customSymbolSize = 25; 
+                labelName += `\n{error|🚨 ${node.gcc_error} 🚨}`;
+            }
+
+            return {
+                name: labelName,
+                symbol: customSymbolType,
+                symbolSize: customSymbolSize,
+                itemStyle: itemStyleOverride,
+                label: customLabelStyle,
+                children: node.children ? node.children.map(formatForChart) : []
+            };
+        }
+
+        function loadTreeData(filename) {
+            fetch(filename)
+                .then(response => {
+                    if (!response.ok) throw new Error("File not found");
+                    return response.json();
+                })
+                .then(data => {
+                    const chartData = formatForChart(data);
+
+                    myChart.setOption({
+                        tooltip: { trigger: 'item', triggerOn: 'mousemove' },
+                        series: [{
+                            type: 'tree',
+                            data: [chartData],
+                            top: '5%', left: '15%', bottom: '5%', right: '20%',
+                            roam: true, 
+                            scaleLimit: { min: 0.5, max: 3.5 },
+                            orient: 'LR', 
+                            initialTreeDepth: 3, // <-- CHANGED THIS: Auto-collapses deep branches initially!
+                            label: { position: 'left', verticalAlign: 'middle', align: 'right', color: '#fff', fontSize: 14 },
+                            leaves: { label: { position: 'right', verticalAlign: 'middle', align: 'left', color: '#a1ef9b' } },
+                            expandAndCollapse: true,
+                            animationDuration: 550
+                        }]
+                    }, true);
+                })
+                .catch(error => {
+                    console.error('Error loading JSON:', error);
+                    alert("Could not load " + filename);
+                });
+        }
+
+        document.getElementById('example-selector').addEventListener('change', function(event) {
+            loadTreeData(event.target.value);
+        });
+
+        loadTreeData('clean_code.json');
+    </script>
+</body>
+</html>
