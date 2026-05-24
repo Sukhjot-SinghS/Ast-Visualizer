@@ -8,6 +8,10 @@
   <img src="https://img.shields.io/badge/Parser-Tree--sitter-3fb950?style=for-the-badge" alt="Tree-sitter"/>
   &nbsp;
   <img src="https://img.shields.io/badge/License-MIT-f0c419?style=for-the-badge" alt="MIT License"/>
+  &nbsp;
+  <a href="https://Sukhjot-SinghS.github.io/Ast-Visualizer/frontend/">
+    <img src="https://img.shields.io/badge/Live_Demo-Click_Me-success?style=for-the-badge" alt="Live Demo"/>
+  </a>
 </p>
 
 ---
